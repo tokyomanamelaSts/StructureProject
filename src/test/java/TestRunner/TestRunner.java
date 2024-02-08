@@ -1,46 +1,78 @@
 package TestRunner;
 
 import java.io.IOException;
-
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
-
-import StepDefination.LoginSteps;
-import StepDefination.SearchHotel;
+import com.codoid.products.exception.FilloException;
+import com.codoid.products.fillo.Recordset;
+import ReUseableUtils.FileHandlerClass;
+import Report.ExtentTestManager;
+import StepDefinition.LoginSteps;
+import StepDefinition.SearchHotel;
 import WebApp.BrowserFactory;
+import org.testng.annotations.Parameters;
 
 public class TestRunner {
-	 private WebDriver driver;
-	 private LoginSteps loginSteps;
-	 SearchHotel searchHotel;
-	public TestRunner() {
-		// TODO Auto-generated constructor stub
-	}
-	
-	    @BeforeMethod
-	    public void setUp() throws IOException, InterruptedException {
-	        // Set up your WebDriver instance (e.g., initialize ChromeDriver)
-	    	driver = 	new BrowserFactory().setUpDriver("Chrome"); 
-	        driver.manage().window().maximize();
-	        loginSteps  = new LoginSteps(driver);
-	        searchHotel = new SearchHotel(driver);
-	    }
+    private WebDriver driver;
+    private LoginSteps loginSteps;
+    private SearchHotel searchHotel;
+    private FileHandlerClass fileHandlerClass;
+    private final String propertyFilePath = "configs/config.properties";
+    private final String excelPath = "TestData/SearchHotel.xlsx";
 
-	    @Test
-	    public void SearchHoltel() {
-	    	driver.get("https://adactinhotelapp.com/");
-	    	loginSteps.LoginToAdactin("StsAutomation", "StsAutomation");
-	    	searchHotel.searchHotel("Sydney", "Hotel Creek", "Double", "4 - Four", "13/12/2023", "31/12/2023", "4 - Four", "4 - Four");
-	    }
-	    
-	    @AfterMethod
-	    public void tearDown() {
-	        // Close the WebDriver instance after each test method
-	        if (driver != null) {
-	          //  driver.quit();
-	        }
-	    }
+    public TestRunner() throws IOException, InterruptedException {
+        fileHandlerClass = new FileHandlerClass();
+    }
+    @Parameters("browser")
 
+    @BeforeMethod
+    public void setUp(String browser) throws IOException, InterruptedException {
+       
+            driver = new BrowserFactory().setUpDriver(browser);
+            driver.manage().window().maximize();
+            ExtentTestManager.startTest("BeforeTests");
+            loginSteps = new LoginSteps(driver);
+            searchHotel = new SearchHotel(driver);
+       
+    }
+
+    @Test
+    public void searchHotelTest() throws IOException, InterruptedException, FilloException {
+     
+            driver.get(fileHandlerClass.GetPropVal(propertyFilePath, "AcdactinURL"));
+            loginSteps.loginToAdactin(
+                fileHandlerClass.GetPropVal(propertyFilePath, "AdactinUsername"),
+                fileHandlerClass.GetPropVal(propertyFilePath, "AdactinPassword"));
+            Recordset searchRecordset = FileHandlerClass.getDataFromExcelbyQuery(excelPath, "select * from SearchHotel");
+            while (searchRecordset.next()) {
+                if (searchRecordset.getField("RunMe").equalsIgnoreCase("yes")) {
+                    ExtentTestManager.startTest(searchRecordset.getField("Testcase"));
+                    ExtentTestManager.getTest().info(searchRecordset.getField("Description"));
+                    searchHotel.searchHotel(
+                        searchRecordset.getField("Location"),
+                        searchRecordset.getField("Hotels"),
+                        searchRecordset.getField("RoomType"),
+                        searchRecordset.getField("NumberOfRooms"),
+                        searchRecordset.getField("CheckInDate"),
+                        searchRecordset.getField("CheckOutDate"),
+                        searchRecordset.getField("AdultsPerRoom"),
+                        searchRecordset.getField("ChildrenPerRoom"));
+                } else {
+                    ExtentTestManager.startTest(searchRecordset.getField("Testcase"));
+                    ExtentTestManager.getTest().skip("Test Skipped");
+                }
+            }
+        } 
+    
+
+    @AfterMethod
+    public void tearDown() {
+        if (driver != null) {
+            driver.quit();
+        }
+    }
+
+  
 }

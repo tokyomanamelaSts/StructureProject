@@ -1,27 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="1" passed="1" failed="0" skipped="0">
+<testng-results total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-14T06:22:40Z" name="Suite" finished-at="2023-12-14T06:23:07Z" duration-ms="26355">
+  <suite started-at="2024-02-08T07:03:24Z" name="Suite" finished-at="2024-02-08T07:03:52Z" duration-ms="28158">
     <groups>
     </groups>
-    <test started-at="2023-12-14T06:22:40Z" name="SearchHotel" finished-at="2023-12-14T06:23:06Z" duration-ms="25772">
+    <test started-at="2024-02-08T07:03:24Z" name="SearchHotel_Firefox" finished-at="2024-02-08T07:03:51Z" duration-ms="26563">
       <class name="TestRunner.TestRunner">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:TestRunner.TestRunner@e15b7e8]" started-at="2023-12-14T08:22:40Z" name="setUp" finished-at="2023-12-14T08:22:53Z" duration-ms="12536" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestRunner.TestRunner@593aaf41]" started-at="2024-02-08T09:03:26Z" name="setUp" finished-at="2024-02-08T09:03:30Z" duration-ms="4735" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="SearchHoltel()[pri:0, instance:TestRunner.TestRunner@e15b7e8]" started-at="2023-12-14T08:22:53Z" name="SearchHoltel" finished-at="2023-12-14T08:23:06Z" duration-ms="12943" status="PASS">
+        <test-method signature="searchHotelTest()[pri:0, instance:TestRunner.TestRunner@593aaf41]" started-at="2024-02-08T09:03:30Z" name="searchHotelTest" finished-at="2024-02-08T09:03:50Z" duration-ms="19136" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- SearchHoltel -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestRunner.TestRunner@e15b7e8]" started-at="2023-12-14T08:23:06Z" name="tearDown" finished-at="2023-12-14T08:23:06Z" duration-ms="1" status="PASS">
+        </test-method> <!-- searchHotelTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestRunner.TestRunner@593aaf41]" started-at="2024-02-08T09:03:50Z" name="tearDown" finished-at="2024-02-08T09:03:51Z" duration-ms="699" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- TestRunner.TestRunner -->
-    </test> <!-- SearchHotel -->
-    <test started-at="2023-12-14T06:23:07Z" name="Test" finished-at="2023-12-14T06:23:07Z" duration-ms="4">
-    </test> <!-- Test -->
+    </test> <!-- SearchHotel_Firefox -->
+    <test started-at="2024-02-08T07:03:24Z" name="SearchHotel_Chrome" finished-at="2024-02-08T07:03:52Z" duration-ms="28157">
+      <class name="TestRunner.TestRunner">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:TestRunner.TestRunner@4b0d79fc]" started-at="2024-02-08T09:03:26Z" name="setUp" finished-at="2024-02-08T09:03:33Z" duration-ms="7089" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="searchHotelTest()[pri:0, instance:TestRunner.TestRunner@4b0d79fc]" started-at="2024-02-08T09:03:33Z" name="searchHotelTest" finished-at="2024-02-08T09:03:52Z" duration-ms="19473" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchHotelTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:TestRunner.TestRunner@4b0d79fc]" started-at="2024-02-08T09:03:52Z" name="tearDown" finished-at="2024-02-08T09:03:52Z" duration-ms="100" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- TestRunner.TestRunner -->
+    </test> <!-- SearchHotel_Chrome -->
   </suite> <!-- Suite -->
 </testng-results>

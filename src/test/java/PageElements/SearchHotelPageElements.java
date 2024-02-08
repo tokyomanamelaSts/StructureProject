@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import WebApp.FluentClass;
 import WebApp.XPathHelper;
 import WebApp.commonActions;
 
@@ -25,47 +26,40 @@ public class SearchHotelPageElements {
         CommonActions = new commonActions(driver);
     }
 
-    // Page actions
-    public void SelectLocation(String Location) {
-        CommonActions.selectByValue(wait.until(ExpectedConditions.visibilityOf(xPathHelper.getElementByid("location"))), Location);
+    public FluentClass getSelectLocation() throws IOException, InterruptedException {
+        return new FluentClass(xPathHelper.getElementByid("location"), driver, "Location Dropdown");
     }
-    
-    
-    public void SelectRoomType(String room_type) {
-        CommonActions.selectByValue(wait.until(ExpectedConditions.visibilityOf(xPathHelper.getElementByid("room_type"))), room_type);
+
+    public FluentClass getSelectRoomType() throws IOException, InterruptedException {
+        return new FluentClass(xPathHelper.getElementByid("room_type"), driver, "Room Type Dropdown");
     }
-    
-    public void SelectHotels(String hotels) {
-        CommonActions.selectByValue(wait.until(ExpectedConditions.visibilityOf(xPathHelper.getElementByid("hotels"))), hotels);
+
+    public FluentClass getSelectHotels() throws IOException, InterruptedException {
+        return new FluentClass(xPathHelper.getElementByid("hotels"), driver, "Hotels Dropdown");
     }
-    
-    
-    public void SelectNumberOfRooms(String room_nos) {
-        CommonActions.selectByValue(wait.until(ExpectedConditions.visibilityOf(xPathHelper.getElementByid("room_nos"))), room_nos);
+
+    public FluentClass getSelectNumberOfRooms() throws IOException, InterruptedException {
+        return new FluentClass(xPathHelper.getElementByid("room_nos"), driver, "Number of Rooms Dropdown");
     }
-    
-    public void enterCheckInDate(String datepick_in) {
-        CommonActions.clearAndType(wait.until(ExpectedConditions.visibilityOf(xPathHelper.getElementByid("datepick_in"))), datepick_in);
+
+    public FluentClass getCheckInDateElement() throws IOException, InterruptedException {
+        return new FluentClass(xPathHelper.getElementByid("datepick_in"), driver, "Check-in Date");
     }
-    
-    public void enterCheckOutDate(String datepick_out) {
-        CommonActions.clearAndType(wait.until(ExpectedConditions.visibilityOf(xPathHelper.getElementByid("datepick_out"))), datepick_out);
+
+    public FluentClass getCheckOutDateElement() throws IOException, InterruptedException {
+        return new FluentClass(xPathHelper.getElementByid("datepick_out"), driver, "Check-out Date");
     }
-    
-    
-   
-    
-    
-    public void SelectAdultRoom(String adult_room) {
-        CommonActions.selectByValue(wait.until(ExpectedConditions.visibilityOf(xPathHelper.getElementByid("adult_room"))), adult_room);
+
+    public FluentClass getSelectAdultRoom() throws IOException, InterruptedException {
+        return new FluentClass(xPathHelper.getElementByid("adult_room"), driver, "Adult Room Dropdown");
     }
-    
-    public void SelectKidsRoom(String child_room) {
-        CommonActions.selectByValue(wait.until(ExpectedConditions.visibilityOf(xPathHelper.getElementByid("child_room"))), child_room);
+
+    public FluentClass getSelectKidsRoom() throws IOException, InterruptedException {
+        return new FluentClass(xPathHelper.getElementByid("child_room"), driver, "Child Room Dropdown");
     }
-    
-    public void clickSumitButton() {
-        CommonActions.click(wait.until(ExpectedConditions.visibilityOf(xPathHelper.getElementByid("Submit"))));
+
+    public FluentClass getSubmitButton() throws IOException, InterruptedException {
+        return new FluentClass(xPathHelper.getElementByid("Submit"), driver, "Submit Button");
     }
     
 }

@@ -5,9 +5,7 @@
     <classes>
       <class name="TestRunner.TestRunner">
         <methods>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="loginTest"/>
+          <include name="searchHotelTest"/>
         </methods>
       </class> <!-- TestRunner.TestRunner -->
     </classes>
