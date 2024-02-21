@@ -3,11 +3,11 @@
 <suite parallel="none" name="Failed suite [Default suite]">
   <test parallel="none" name="Default test(failed)">
     <classes>
-      <class name="TestRunner.TestRunner">
+      <class name="com.sts.web.TestRunner.TestRunner">
         <methods>
           <include name="searchHotelTest"/>
         </methods>
-      </class> <!-- TestRunner.TestRunner -->
+      </class> <!-- com.sts.web.TestRunner.TestRunner -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

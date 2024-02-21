@@ -1,9 +1,11 @@
-package PageElements;
+package com.sts.web.PageElements;
 
 import java.io.IOException;
 import org.openqa.selenium.WebDriver;
+
 import WebApp.FluentClass;
 import WebApp.XPathHelper;
+
 
 public class LoginPageElements {
 
@@ -17,7 +19,7 @@ public class LoginPageElements {
     }
 
     protected FluentClass getUserNameElement() throws IOException, InterruptedException {
-        return new FluentClass(xPathHelper.getElementByid("username"), driver, "Username Textbox");
+        return new FluentClass(xPathHelper.getElementByid("Username"), driver, "Username Textbox");
     }
 
     protected FluentClass getPasswordElement() throws IOException, InterruptedException {

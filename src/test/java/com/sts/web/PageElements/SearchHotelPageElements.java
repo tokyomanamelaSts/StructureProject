@@ -1,4 +1,4 @@
-package PageElements;
+package com.sts.web.PageElements;
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;

@@ -80,6 +80,19 @@
 			<version>2.15.2</version>
 		</dependency>
 
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>3.0.7</version>
+			<scope>test</scope>
+		</dependency>
+	<dependency>
+			<groupId>technoAutomate2024</groupId>
+			<artifactId>v1</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+	
+
 	</dependencies>
 
 

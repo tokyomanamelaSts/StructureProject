@@ -5,10 +5,10 @@
   <listeners>
     <listener class-name="Listeners.Listeners"/>
   </listeners>
-  <test parallel="none" name="SearchHotel_Edge(failed)">
-    <parameter name="browser" value="safari"/>
+  <test parallel="none" name="SearchHotel_Firefox(failed)">
+    <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="TestRunner.TestRunner">
+      <class name="com.sts.web.TestRunner.TestRunner">
         <methods>
           <include name="searchHotelTest"/>
           <include name="setUp"/>
@@ -16,7 +16,21 @@
           <include name="tearDown"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- TestRunner.TestRunner -->
+      </class> <!-- com.sts.web.TestRunner.TestRunner -->
     </classes>
-  </test> <!-- SearchHotel_Edge(failed) -->
+  </test> <!-- SearchHotel_Firefox(failed) -->
+  <test parallel="none" name="SearchHotel_Chrome(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.sts.web.TestRunner.TestRunner">
+        <methods>
+          <include name="searchHotelTest"/>
+          <include name="setUp"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.sts.web.TestRunner.TestRunner -->
+    </classes>
+  </test> <!-- SearchHotel_Chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,8 +1,9 @@
-package StepDefinition;
+package com.sts.web.StepDefinition;
 
 import java.io.IOException;
 import org.openqa.selenium.WebDriver;
-import PageElements.LoginPageElements;
+
+import com.sts.web.PageElements.LoginPageElements;
 
 public class LoginSteps extends LoginPageElements {
 

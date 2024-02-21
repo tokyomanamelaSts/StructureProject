@@ -1,4 +1,4 @@
-package TestRunner;
+package com.sts.web.TestRunner;
 
 import java.io.IOException;
 import org.openqa.selenium.WebDriver;
@@ -7,10 +7,11 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.codoid.products.exception.FilloException;
 import com.codoid.products.fillo.Recordset;
+import com.sts.web.StepDefinition.LoginSteps;
+import com.sts.web.StepDefinition.SearchHotel;
+
 import ReUseableUtils.FileHandlerClass;
 import Report.ExtentTestManager;
-import StepDefinition.LoginSteps;
-import StepDefinition.SearchHotel;
 import WebApp.BrowserFactory;
 import org.testng.annotations.Parameters;
 
@@ -41,7 +42,7 @@ public class TestRunner {
     @Test
     public void searchHotelTest() throws IOException, InterruptedException, FilloException {
      
-            driver.get(fileHandlerClass.GetPropVal(propertyFilePath, "AcdactinURL"));
+            driver.get(fileHandlerClass.GetPropVal(propertyFilePath, "AdactinUsername"));
             loginSteps.loginToAdactin(
                 fileHandlerClass.GetPropVal(propertyFilePath, "AdactinUsername"),
                 fileHandlerClass.GetPropVal(propertyFilePath, "AdactinPassword"));

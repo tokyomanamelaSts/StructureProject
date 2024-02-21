@@ -1,9 +1,10 @@
-package StepDefinition;
+package com.sts.web.StepDefinition;
 
 import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
-import PageElements.SearchHotelPageElements;
+
+import com.sts.web.PageElements.SearchHotelPageElements;
 
 public class SearchHotel extends SearchHotelPageElements{
 
