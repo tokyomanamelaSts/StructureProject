@@ -16,15 +16,12 @@ public class CreateTemplate extends SearchHotelPageElements{
 	}
 
 	public void createNewTemplate(String TemplateName, String TemplateDescription, String Role, String recipientName,
-			String RecipientEmail, String EmaiSubject , String EmailMessage) throws IOException, InterruptedException {
-       Thread.sleep(9000);
+			String RecipientEmail, String EmaiSubject , String EmailMessage, String location) throws IOException, InterruptedException {
 		 getTemplateTab().click();
-		// Thread.sleep(9000);
 		 getCreateTemplateButton().click();
-		// Thread.sleep(9000);
 		 getTemplateNameTextBox().type(TemplateName);		 
 		 getTemplateDescriTionTextbox().type(TemplateDescription);	
-		 attachDoc();
+		 attachDoc(location);
 		 getRoleTextBox().type(Role);
 		 getreciepientNameTextBox().type(recipientName);
 		 getReciepientEmailTextBox().type(RecipientEmail);
@@ -35,8 +32,7 @@ public class CreateTemplate extends SearchHotelPageElements{
 		 getSaveAndCloseButton().click();
 		 getUseButton(TemplateName).click();
 		 getSendButton().click();
-		/* getSelectKidsRoom().selectDropdownByText(KidsRoom);
-		 getSubmitButton().click();*/
+		
 	}
 
 }

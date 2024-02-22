@@ -58,7 +58,7 @@ public class TestRunner {
                         searchRecordset.getField("recipientName"),
                         searchRecordset.getField("RecipientEmail"),
                         searchRecordset.getField("EmaiSubject"),
-                        searchRecordset.getField("EmailMessage"));
+                        searchRecordset.getField("EmailMessage"), searchRecordset.getField("Location"));
                 } else {
                     ExtentTestManager.startTest(searchRecordset.getField("Testcase"));
                     ExtentTestManager.getTest().skip("Test Skipped");

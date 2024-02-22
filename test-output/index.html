@@ -132,14 +132,13 @@
                   <a name="searchHotelTest">
                   </a> <!-- searchHotelTest -->
                   <span class="method-name">searchHotelTest</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@data-qa=&apos;quick-send-envelope-send&apos;]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: Browsing context has been discarded
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;Tokyos-Air&apos;, ip: &apos;fe80:0:0:0:10d0:e3c:e8d3:f3b8%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.4&apos;, java.version: &apos;16.0.2&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 122.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20240205133611, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 21.5.0, moz:processID: 67252, moz:profile: /var/folders/10/nx41rvp50wq..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.104:4444/ses..., setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 4b8b2f88-1dbb-4021-a848-29af473a8727
-*** Element info: {Using=xpath, value=//*[@data-qa=&apos;quick-send-envelope-send&apos;]}
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 122.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20240205133611, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 21.5.0, moz:processID: 72125, moz:profile: /var/folders/10/nx41rvp50wq..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.104:4444/ses..., setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b20d80eb-b00c-40d8-bd2b-9a52f2381fa1
+*** Element info: {Using=xpath, value=//*[@name=&apos;email&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
@@ -150,10 +149,11 @@ Session ID: 4b8b2f88-1dbb-4021-a848-29af473a8727
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at WebApp.XPathHelper.getElementByXPath(XPathHelper.java:109)
-	at com.sts.web.PageElements.SearchHotelPageElements.getSendButton(SearchHotelPageElements.java:131)
-	at com.sts.web.StepDefinition.CreateTemplate.createNewTemplate(CreateTemplate.java:37)
-	at com.sts.web.TestRunner.TestRunner.searchHotelTest(TestRunner.java:54)
-... Removed 28 stack frames
+	at WebApp.XPathHelper.getElementByname(XPathHelper.java:74)
+	at com.sts.web.PageElements.LoginPageElements.getUserNameElement(LoginPageElements.java:22)
+	at com.sts.web.StepDefinition.LoginSteps.loginToDocusign(LoginSteps.java:16)
+	at com.sts.web.TestRunner.TestRunner.searchHotelTest(TestRunner.java:46)
+... Removed 29 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -162,29 +162,21 @@ Session ID: 4b8b2f88-1dbb-4021-a848-29af473a8727
                   <a name="searchHotelTest">
                   </a> <!-- searchHotelTest -->
                   <span class="method-name">searchHotelTest</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@data-qa=&apos;header-TEMPLATES-tab-button&apos;]&quot;}
-  (Session info: chrome=122.0.6261.57)
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//*[@name=&apos;email&apos;]
 For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;Tokyos-Air&apos;, ip: &apos;fe80:0:0:0:10d0:e3c:e8d3:f3b8%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.4&apos;, java.version: &apos;16.0.2&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.57, chrome: {chromedriverVersion: 122.0.6261.57 (87957e464700..., userDataDir: /var/folders/10/nx41rvp50wq...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57966}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.104:4444/ses..., se:cdpVersion: 122.0.6261.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 2f70a2385bf0b1ed25f16d4573d2e750
-*** Element info: {Using=xpath, value=//*[@data-qa=&apos;header-TEMPLATES-tab-button&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at WebApp.XPathHelper.getElementByXPath(XPathHelper.java:109)
-	at com.sts.web.PageElements.SearchHotelPageElements.getTemplateTab(SearchHotelPageElements.java:39)
-	at com.sts.web.StepDefinition.CreateTemplate.createNewTemplate(CreateTemplate.java:21)
-	at com.sts.web.TestRunner.TestRunner.searchHotelTest(TestRunner.java:54)
-... Removed 28 stack frames
+	at WebApp.XPathHelper.getElementByname(XPathHelper.java:74)
+	at com.sts.web.PageElements.LoginPageElements.getUserNameElement(LoginPageElements.java:22)
+	at com.sts.web.StepDefinition.LoginSteps.loginToDocusign(LoginSteps.java:16)
+	at com.sts.web.TestRunner.TestRunner.searchHotelTest(TestRunner.java:46)
+... Removed 24 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -259,16 +251,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'searchHotelTest')
 data.setCell(0, 2, 'com.sts.web.TestRunner.TestRunner')
-data.setCell(0, 3, 210272);
+data.setCell(0, 3, 78149);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'searchHotelTest')
 data.setCell(1, 2, 'com.sts.web.TestRunner.TestRunner')
-data.setCell(1, 3, 82869);
+data.setCell(1, 3, 1551);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 4 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -303,25 +295,25 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">searchHotelTest</span>
-                <span class="method-start">7482 ms</span>
+                <span class="method-start">7646 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">90376 ms</span>
+                <span class="method-start">85802 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">92727 ms</span>
+                <span class="method-start">89189 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">searchHotelTest</span>
-                <span class="method-start">106791 ms</span>
+                <span class="method-start">98146 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">317097 ms</span>
+                <span class="method-start">99712 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

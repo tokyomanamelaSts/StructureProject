@@ -34,40 +34,26 @@ public class SearchHotelPageElements {
 	}
 
 	public FluentClass getTemplateTab() throws IOException, InterruptedException {
-
-		wait.waitForElementClickable("//*[@data-qa='header-TEMPLATES-tab-button']");
-		WebElement template = xPathHelper.getElementByXPath("//*[@data-qa='header-TEMPLATES-tab-button']");
-		return new FluentClass(template, driver, "Template Tab");
+		return new FluentClass(xPathHelper.getElementByXPath("//*[@data-qa='header-TEMPLATES-tab-button']"), driver, "Template Tab");
 	}
 
 	public FluentClass getCreateTemplateButton() throws IOException, InterruptedException {
-		wait.waitForElementClickable("/*[@data-qa='templates-sidebar-actions-meerkat_create_template']");
-		WebElement template = xPathHelper.getElementByXPath("//*[@data-qa='templates-sidebar-actions-meerkat_create_template']");
-		return new FluentClass(template, driver, "Template Button");
+		return new FluentClass(xPathHelper.getElementByXPath("//*[@data-qa='templates-sidebar-actions-meerkat_create_template']"), driver, "Template Button");
 	}
-
 	public FluentClass getTemplateNameTextBox() throws IOException, InterruptedException {
-
-
-		wait.waitForElementClickable("/*[@id='prepare-template-name']");
-		WebElement template =xPathHelper.getElementByid("prepare-template-name");
-		return new FluentClass(template, driver, "Template Name Text Box");
+		return new FluentClass(xPathHelper.getElementByid("prepare-template-name"), driver, "Template Name Text Box");
 	}
 
 	public FluentClass getTemplateDescriTionTextbox() throws IOException, InterruptedException {
 		return new FluentClass(xPathHelper.getElementByXPath("//*[@data-qa='prepare-template-desc']"), driver, "Template Name Description");
 	}
 
-	public void attachDoc() {
-
-		//    	Actions actions = new Actions(driver);
-		//        actions.sendKeys("/Users/tokyomanamela/eclipse-workspace/StructureProject/TestData/DeclarationOfSymptoms.docx").perform(); // Enter the path to the document
-		//        actions.sendKeys("\uE007").perform();
+	public void attachDoc(String location) {
+		location = System.getProperty("user.dir")+location;
 		WebElement fileUploadElement = driver.findElement(By.xpath("//input[@data-qa='upload-file-input-file-drop']"));
-
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].style.display = 'block';", fileUploadElement); // Make the input visible
-		fileUploadElement.sendKeys("/Users/tokyomanamela/eclipse-workspace/StructureProject/TestData/DeclarationOfSymptoms.docx"); 
+		fileUploadElement.sendKeys(location); 
 	}
 
 
@@ -107,49 +93,22 @@ public class SearchHotelPageElements {
 
 	public void dragAndDropInitial() throws IOException, InterruptedException {
 
-
-		/*	
-        mouseActions.dragAndDropByOffset(xPathHelper.getElementByXPath("//*[@title='Initial']"), 5, 9);
-
-
-        WebElement ele = xPathHelper.getElementByXPath("(//*[@style= 'pointer-events: auto; cursor: pointer;'])[2]");
-        JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-
-        /* Long horizontalPosition = (Long) jsExecutor.executeScript("return arguments[0].getBoundingClientRect().left;", ele);
-        System.out.println("Horizontal position: " + horizontalPosition);
-
-        // Execute JavaScript to get the vertical position of the element
-        Long verticalPosition = (Long) jsExecutor.executeScript("return arguments[0].getBoundingClientRect().top;", ele);
-        System.out.println("Vertical position: " + verticalPosition);   */
-
 	}  
 
 
 	public FluentClass getSendButton() throws IOException, InterruptedException {
 
-		wait.waitForElementClickable("//*[@data-qa='quick-send-envelope-send']");
-		WebElement template =xPathHelper.getElementByXPath("//*[@data-qa='quick-send-envelope-send']");
-		return new FluentClass(template, driver, "Next Button");
+		return new FluentClass(xPathHelper.getElementByXPath("//*[@data-qa='quick-send-envelope-send']"), driver, "Next Button");
 	}
 
 
 
 
-	public void dragAndDropIni() throws IOException, InterruptedException {
-
-
+	public void dragAndDrop() throws IOException, InterruptedException {
 
 		mouseActions.dragAndDropByOffset(xPathHelper.getElementByXPath("//*[@title='Initial']"), 5, 9);
 		WebElement ele = xPathHelper.getElementByXPath("(//*[@style= 'pointer-events: auto; cursor: pointer;'])[2]");
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-
-		/* Long horizontalPosition = (Long) jsExecutor.executeScript("return arguments[0].getBoundingClientRect().left;", ele);
-        System.out.println("Horizontal position: " + horizontalPosition);
-
-        // Execute JavaScript to get the vertical position of the element
-        Long verticalPosition = (Long) jsExecutor.executeScript("return arguments[0].getBoundingClientRect().top;", ele);
-        System.out.println("Vertical position: " + verticalPosition);   */
-
 	} 
 
 	public FluentClass getUseButton(String eleName) throws IOException, InterruptedException {
