@@ -15,7 +15,7 @@ import WebApp.WaitUtils;
 
 
 
-public class SearchHotelPageElements {
+public class CreateTemplateSteps {
 
 	private WebDriver driver;
 	XPathHelper xPathHelper;
@@ -24,7 +24,7 @@ public class SearchHotelPageElements {
 	WaitUtils wait ;
 
 	// Constructor
-	public SearchHotelPageElements(WebDriver driver) throws IOException, InterruptedException {
+	public CreateTemplateSteps(WebDriver driver) throws IOException, InterruptedException {
 		this.driver = driver;
 
 		xPathHelper = new XPathHelper(driver);

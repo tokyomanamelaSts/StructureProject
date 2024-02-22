@@ -4,9 +4,9 @@ import java.io.IOException;
 
 import org.openqa.selenium.WebDriver;
 
-import com.sts.web.PageElements.SearchHotelPageElements;
+import com.sts.web.PageElements.CreateTemplateSteps;
 
-public class CreateTemplate extends SearchHotelPageElements{
+public class CreateTemplate extends CreateTemplateSteps{
 
 	
 	
