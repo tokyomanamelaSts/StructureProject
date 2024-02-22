@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Feb 21 10:02:58 SAST 2024</td>
+<td>Started on:</td><td>Thu Feb 22 15:08:58 SAST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>9 seconds (9033 ms)</td>
+<tr><td>Total time:</td><td>91 seconds (91844 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,28 +76,37 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.sts.web.TestRunner.TestRunner.searchHotelTest()'><b>searchHotelTest</b><br>Test class: com.sts.web.TestRunner.TestRunner</td>
-<td><div><pre>org.openqa.selenium.InvalidArgumentException: Malformed URL: URL constructor: StsAutomation is not a valid URL.
+<td><div><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@data-qa=&apos;quick-send-envelope-send&apos;]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Tokyos-MacBook-Air.local&apos;, ip: &apos;2c0f:f528:40:2342:2812:4224:a581:17e5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.4&apos;, java.version: &apos;16.0.2&apos;
+System info: host: &apos;Tokyos-Air&apos;, ip: &apos;fe80:0:0:0:10d0:e3c:e8d3:f3b8%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.4&apos;, java.version: &apos;16.0.2&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 122.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20240205133611, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 21.5.0, moz:processID: 18464, moz:profile: /var/folders/10/nx41rvp50wq..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.104:4444/ses..., setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 9e8af862-2557-4b9d-9ae7-ed0d489d3ceb
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 122.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20240205133611, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 21.5.0, moz:processID: 68116, moz:profile: /var/folders/10/nx41rvp50wq..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.104:4444/ses..., setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b9f38657-532d-4e85-9b63-3b0f5eef578a
+*** Element info: {Using=xpath, value=//*[@data-qa=&apos;quick-send-envelope-send&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at com.sts.web.TestRunner.TestRunner.searchHotelTest(TestRunner.java:45)
-... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace133177937", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace133177937'><pre>org.openqa.selenium.InvalidArgumentException: Malformed URL: URL constructor: StsAutomation is not a valid URL.
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at WebApp.XPathHelper.getElementByXPath(XPathHelper.java:109)
+	at com.sts.web.PageElements.SearchHotelPageElements.getSendButton(SearchHotelPageElements.java:131)
+	at com.sts.web.StepDefinition.CreateTemplate.createNewTemplate(CreateTemplate.java:37)
+	at com.sts.web.TestRunner.TestRunner.searchHotelTest(TestRunner.java:54)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace825791803", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace825791803'><pre>org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@data-qa=&apos;quick-send-envelope-send&apos;]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Tokyos-MacBook-Air.local&apos;, ip: &apos;2c0f:f528:40:2342:2812:4224:a581:17e5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.4&apos;, java.version: &apos;16.0.2&apos;
+System info: host: &apos;Tokyos-Air&apos;, ip: &apos;fe80:0:0:0:10d0:e3c:e8d3:f3b8%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.4&apos;, java.version: &apos;16.0.2&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 122.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20240205133611, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 21.5.0, moz:processID: 18464, moz:profile: /var/folders/10/nx41rvp50wq..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.104:4444/ses..., setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 9e8af862-2557-4b9d-9ae7-ed0d489d3ceb
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 122.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20240205133611, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 21.5.0, moz:processID: 68116, moz:profile: /var/folders/10/nx41rvp50wq..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.104:4444/ses..., setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b9f38657-532d-4e85-9b63-3b0f5eef578a
+*** Element info: {Using=xpath, value=//*[@data-qa=&apos;quick-send-envelope-send&apos;]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor22.newInstance(Unknown Source)
 	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
 	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
 	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
@@ -106,8 +115,14 @@ Session ID: 9e8af862-2557-4b9d-9ae7-ed0d489d3ceb
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at com.sts.web.TestRunner.TestRunner.searchHotelTest(TestRunner.java:45)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at WebApp.XPathHelper.getElementByXPath(XPathHelper.java:109)
+	at com.sts.web.PageElements.SearchHotelPageElements.getSendButton(SearchHotelPageElements.java:131)
+	at com.sts.web.StepDefinition.CreateTemplate.createNewTemplate(CreateTemplate.java:37)
+	at com.sts.web.TestRunner.TestRunner.searchHotelTest(TestRunner.java:54)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -133,7 +148,7 @@ Session ID: 9e8af862-2557-4b9d-9ae7-ed0d489d3ceb
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>0</td>
+<td>81</td>
 <td>com.sts.web.TestRunner.TestRunner@428640fa</td></tr>
 </table><p>
 </body>

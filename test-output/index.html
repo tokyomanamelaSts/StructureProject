@@ -53,7 +53,7 @@
                 </li>
                 <li>
                   <a href="#" panel-name="testlist-Suite" class="navigator-link ">
-                    <span class="test-stats">3 tests</span>
+                    <span class="test-stats">2 tests</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -90,7 +90,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 2 failed,   1 passed</span>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -110,20 +110,6 @@
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
-                  </li>
-                  <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
-                    </span>
-                    <div class="method-list-content passed suite-Suite">
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.sts.api.runnerClass.ApiRunner" class="method navigator-link" hash-for-method="OrderPetRunner">OrderPetRunner</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -146,20 +132,28 @@
                   <a name="searchHotelTest">
                   </a> <!-- searchHotelTest -->
                   <span class="method-name">searchHotelTest</span>
-                  <div class="stack-trace">org.openqa.selenium.InvalidArgumentException: Malformed URL: URL constructor: StsAutomation is not a valid URL.
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: //*[@data-qa=&apos;quick-send-envelope-send&apos;]
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Tokyos-MacBook-Air.local&apos;, ip: &apos;2c0f:f528:40:2342:2812:4224:a581:17e5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.4&apos;, java.version: &apos;16.0.2&apos;
+System info: host: &apos;Tokyos-Air&apos;, ip: &apos;fe80:0:0:0:10d0:e3c:e8d3:f3b8%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.4&apos;, java.version: &apos;16.0.2&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 122.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20240205133611, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 21.5.0, moz:processID: 18464, moz:profile: /var/folders/10/nx41rvp50wq..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.104:4444/ses..., setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: 9e8af862-2557-4b9d-9ae7-ed0d489d3ceb
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 122.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20240205133611, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 21.5.0, moz:processID: 67252, moz:profile: /var/folders/10/nx41rvp50wq..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.104:4444/ses..., setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 4b8b2f88-1dbb-4021-a848-29af473a8727
+*** Element info: {Using=xpath, value=//*[@data-qa=&apos;quick-send-envelope-send&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at com.sts.web.TestRunner.TestRunner.searchHotelTest(TestRunner.java:45)
-... Removed 29 stack frames
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at WebApp.XPathHelper.getElementByXPath(XPathHelper.java:109)
+	at com.sts.web.PageElements.SearchHotelPageElements.getSendButton(SearchHotelPageElements.java:131)
+	at com.sts.web.StepDefinition.CreateTemplate.createNewTemplate(CreateTemplate.java:37)
+	at com.sts.web.TestRunner.TestRunner.searchHotelTest(TestRunner.java:54)
+... Removed 28 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -168,41 +162,34 @@ Session ID: 9e8af862-2557-4b9d-9ae7-ed0d489d3ceb
                   <a name="searchHotelTest">
                   </a> <!-- searchHotelTest -->
                   <span class="method-name">searchHotelTest</span>
-                  <div class="stack-trace">org.openqa.selenium.InvalidArgumentException: invalid argument
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@data-qa=&apos;header-TEMPLATES-tab-button&apos;]&quot;}
   (Session info: chrome=122.0.6261.57)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;Tokyos-MacBook-Air.local&apos;, ip: &apos;2c0f:f528:40:2342:2812:4224:a581:17e5%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.4&apos;, java.version: &apos;16.0.2&apos;
+System info: host: &apos;Tokyos-Air&apos;, ip: &apos;fe80:0:0:0:10d0:e3c:e8d3:f3b8%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.4&apos;, java.version: &apos;16.0.2&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.57, chrome: {chromedriverVersion: 122.0.6261.57 (87957e464700..., userDataDir: /var/folders/10/nx41rvp50wq...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62356}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.104:4444/ses..., se:cdpVersion: 122.0.6261.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 082440710e4c692b41f1e6711f92a351
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.57, chrome: {chromedriverVersion: 122.0.6261.57 (87957e464700..., userDataDir: /var/folders/10/nx41rvp50wq...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57966}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.104:4444/ses..., se:cdpVersion: 122.0.6261.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 2f70a2385bf0b1ed25f16d4573d2e750
+*** Element info: {Using=xpath, value=//*[@data-qa=&apos;header-TEMPLATES-tab-button&apos;]}
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-	at com.sts.web.TestRunner.TestRunner.searchHotelTest(TestRunner.java:45)
-... Removed 29 stack frames
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at WebApp.XPathHelper.getElementByXPath(XPathHelper.java:109)
+	at com.sts.web.PageElements.SearchHotelPageElements.getTemplateTab(SearchHotelPageElements.java:39)
+	at com.sts.web.StepDefinition.CreateTemplate.createNewTemplate(CreateTemplate.java:21)
+	at com.sts.web.TestRunner.TestRunner.searchHotelTest(TestRunner.java:54)
+... Removed 28 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
           </div> <!-- suite-Suite-class-failed -->
-          <div class="suite-Suite-class-passed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">com.sts.api.runnerClass.ApiRunner</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="OrderPetRunner">
-                  </a> <!-- OrderPetRunner -->
-                  <span class="method-name">OrderPetRunner</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-passed -->
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -228,11 +215,6 @@ Session ID: 082440710e4c692b41f1e6711f92a351
       &lt;class name=&quot;com.sts.web.TestRunner.TestRunner&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- SearchHotel_Chrome --&gt;
-  &lt;test name=&quot;Place_Order&quot;&gt;
-    &lt;classes&gt;
-      &lt;class name=&quot;com.sts.api.runnerClass.ApiRunner&quot;/&gt;
-    &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Place_Order --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -248,9 +230,6 @@ Session ID: 082440710e4c692b41f1e6711f92a351
               </li>
               <li>
                 <span class="test-name">SearchHotel_Chrome (1 class)</span>
-              </li>
-              <li>
-                <span class="test-name">Place_Order (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -276,24 +255,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'OrderPetRunner')
-data.setCell(0, 2, 'com.sts.api.runnerClass.ApiRunner')
-data.setCell(0, 3, 17980);
+data.setCell(0, 1, 'searchHotelTest')
+data.setCell(0, 2, 'com.sts.web.TestRunner.TestRunner')
+data.setCell(0, 3, 210272);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'searchHotelTest')
 data.setCell(1, 2, 'com.sts.web.TestRunner.TestRunner')
-data.setCell(1, 3, 133);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'searchHotelTest')
-data.setCell(2, 2, 'com.sts.web.TestRunner.TestRunner')
-data.setCell(2, 3, 47);
+data.setCell(1, 3, 82869);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 18 seconds</span>
+              <span class="suite-total-time">Total running time: 4 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -328,33 +303,26 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">searchHotelTest</span>
-                <span class="method-start">7061 ms</span>
+                <span class="method-start">7482 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">7199 ms</span>
+                <span class="method-start">90376 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">9107 ms</span>
+                <span class="method-start">92727 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">searchHotelTest</span>
-                <span class="method-start">66566 ms</span>
+                <span class="method-start">106791 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">66624 ms</span>
+                <span class="method-start">317097 ms</span>
               </div> <!-- configuration-method after -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
-              <div class="chronological-class-name">com.sts.api.runnerClass.ApiRunner</div> <!-- chronological-class-name -->
-              <div class="test-method">
-                <span class="method-name">OrderPetRunner</span>
-                <span class="method-start">67546 ms</span>
-              </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

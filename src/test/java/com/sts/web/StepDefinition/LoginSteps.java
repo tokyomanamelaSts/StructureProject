@@ -11,9 +11,11 @@ public class LoginSteps extends LoginPageElements {
         super(driver);
     }
 
-    public void loginToAdactin(String username, String password) throws IOException, InterruptedException {
+    public void loginToDocusign(String username, String password) throws IOException, InterruptedException {
+    //	Thread.sleep(2000);
     	getUserNameElement().type(username);
+    	getNextButtonElement().click();
     	getPasswordElement() .type(password);
-    	getSubmitButtonElement().click();
+    	getLoginElement().click();
     }
 }

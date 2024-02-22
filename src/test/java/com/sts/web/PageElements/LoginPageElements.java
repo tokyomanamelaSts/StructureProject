@@ -19,14 +19,19 @@ public class LoginPageElements {
     }
 
     protected FluentClass getUserNameElement() throws IOException, InterruptedException {
-        return new FluentClass(xPathHelper.getElementByid("Username"), driver, "Username Textbox");
+        return new FluentClass(xPathHelper.getElementByname("email"), driver, "Username Textbox");
     }
 
     protected FluentClass getPasswordElement() throws IOException, InterruptedException {
-        return new FluentClass(xPathHelper.getElementByid("password"), driver, "Password Textbox");
+        return new FluentClass(xPathHelper.getElementByname("password"), driver, "Password Textbox");
     }
 
-    protected FluentClass getSubmitButtonElement() throws IOException, InterruptedException {
-        return new FluentClass(xPathHelper.getElementByid("login"), driver, "Submit Textbox");
+    protected FluentClass getNextButtonElement() throws IOException, InterruptedException {
+        return new FluentClass(xPathHelper.getElementByXPath("//button[@type='submit']"), driver, "Next Button");
+    }
+    
+    
+    protected FluentClass getLoginElement() throws IOException, InterruptedException {
+        return new FluentClass(xPathHelper.getElementByXPath("//button[@type='submit']"), driver, "Login Button");
     }
 }
