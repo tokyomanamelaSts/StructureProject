@@ -10,13 +10,13 @@ public class CreateTemplate extends CreateTemplateSteps{
 
 	
 	
-	public CreateTemplate(WebDriver driver) throws IOException, InterruptedException {
-		super(driver);
+	public CreateTemplate(WebDriver driver, boolean attachEvidence  ) throws IOException, InterruptedException {
+		super(driver, attachEvidence);
 		// TODO Auto-generated constructor stub
 	}
 
 	public void createNewTemplate(String TemplateName, String TemplateDescription, String Role, String recipientName,
-			String RecipientEmail, String EmaiSubject , String EmailMessage, String location) throws IOException, InterruptedException {
+			String RecipientEmail, String EmaiSubject , String EmailMessage, String location) throws Exception {
 		 getTemplateTab().click();
 		 getCreateTemplateButton().click();
 		 getTemplateNameTextBox().type(TemplateName);		 
@@ -28,9 +28,18 @@ public class CreateTemplate extends CreateTemplateSteps{
 		 getEmaiSubjectTextBox().type(EmaiSubject);
 		 getEmailMessageTextBox().type(EmailMessage);
 		 getNextButton().click();
+	
 		 dragAndDropInitial() ;
+		 Thread.sleep(9000);
 		 getSaveAndCloseButton().click();
 		 getUseButton(TemplateName).click();
+		 try {
+		//	 getNextBeforeSendButton().click();
+		} catch (Exception e) {
+			// TODO: handle exception
+			
+		}
+	
 		 getSendButton().click();
 		
 	}

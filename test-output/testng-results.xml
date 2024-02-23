@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results total="2" passed="0" failed="2" skipped="0">
+<testng-results total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-22T14:09:24Z" name="Suite" finished-at="2024-02-22T14:11:05Z" duration-ms="101232">
+  <suite started-at="2024-02-22T17:57:16Z" name="Suite" finished-at="2024-02-22T17:58:27Z" duration-ms="70732">
     <groups>
     </groups>
-    <test started-at="2024-02-22T14:09:24Z" name="SearchHotel_Firefox" finished-at="2024-02-22T14:10:53Z" duration-ms="88990">
+    <test started-at="2024-02-22T17:57:16Z" name="Create_Template" finished-at="2024-02-22T17:58:27Z" duration-ms="70732">
       <class name="com.sts.web.TestRunner.TestRunner">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.sts.web.TestRunner.TestRunner@428640fa]" started-at="2024-02-22T16:09:25Z" name="setUp" finished-at="2024-02-22T16:09:33Z" duration-ms="7646" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.sts.web.TestRunner.TestRunner@2dc54ad4]" started-at="2024-02-22T19:57:17Z" name="setUp" finished-at="2024-02-22T19:57:21Z" duration-ms="3969" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,152 +18,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="searchHotelTest()[pri:0, instance:com.sts.web.TestRunner.TestRunner@428640fa]" started-at="2024-02-22T16:09:33Z" name="searchHotelTest" finished-at="2024-02-22T16:10:51Z" duration-ms="78149" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchWindowException">
-            <message>
-              <![CDATA[Browsing context has been discarded
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Tokyos-Air', ip: 'fe80:0:0:0:10d0:e3c:e8d3:f3b8%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.4', java.version: '16.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 122.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20240205133611, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 21.5.0, moz:processID: 72125, moz:profile: /var/folders/10/nx41rvp50wq..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.104:4444/ses..., setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b20d80eb-b00c-40d8-bd2b-9a52f2381fa1
-*** Element info: {Using=xpath, value=//*[@name='email']}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchWindowException: Browsing context has been discarded
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Tokyos-Air', ip: 'fe80:0:0:0:10d0:e3c:e8d3:f3b8%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.4', java.version: '16.0.2'
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 122.0.1, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20240205133611, moz:geckodriverVersion: 0.34.0, moz:headless: false, moz:platformVersion: 21.5.0, moz:processID: 72125, moz:profile: /var/folders/10/nx41rvp50wq..., moz:shutdownTimeout: 60000, moz:webdriverClick: true, moz:windowless: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.104:4444/ses..., setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: b20d80eb-b00c-40d8-bd2b-9a52f2381fa1
-*** Element info: {Using=xpath, value=//*[@name='email']}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at WebApp.XPathHelper.getElementByXPath(XPathHelper.java:109)
-	at WebApp.XPathHelper.getElementByname(XPathHelper.java:74)
-	at com.sts.web.PageElements.LoginPageElements.getUserNameElement(LoginPageElements.java:22)
-	at com.sts.web.StepDefinition.LoginSteps.loginToDocusign(LoginSteps.java:16)
-	at com.sts.web.TestRunner.TestRunner.searchHotelTest(TestRunner.java:46)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchWindowException -->
+        <test-method signature="searchHotelTest()[pri:0, instance:com.sts.web.TestRunner.TestRunner@2dc54ad4]" started-at="2024-02-22T19:57:21Z" name="searchHotelTest" finished-at="2024-02-22T19:58:25Z" duration-ms="64016" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- searchHotelTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sts.web.TestRunner.TestRunner@428640fa]" started-at="2024-02-22T16:10:51Z" name="tearDown" finished-at="2024-02-22T16:10:53Z" duration-ms="1765" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sts.web.TestRunner.TestRunner@2dc54ad4]" started-at="2024-02-22T19:58:26Z" name="tearDown" finished-at="2024-02-22T19:58:27Z" duration-ms="720" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.sts.web.TestRunner.TestRunner -->
-    </test> <!-- SearchHotel_Firefox -->
-    <test started-at="2024-02-22T14:10:53Z" name="SearchHotel_Chrome" finished-at="2024-02-22T14:11:05Z" duration-ms="11409">
-      <class name="com.sts.web.TestRunner.TestRunner">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:com.sts.web.TestRunner.TestRunner@f09733f]" started-at="2024-02-22T16:10:54Z" name="setUp" finished-at="2024-02-22T16:11:03Z" duration-ms="8956" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method signature="searchHotelTest()[pri:0, instance:com.sts.web.TestRunner.TestRunner@f09733f]" started-at="2024-02-22T16:11:03Z" name="searchHotelTest" finished-at="2024-02-22T16:11:05Z" duration-ms="1551" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[Cannot locate an element using xpath=//*[@name='email']
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Tokyos-Air', ip: 'fe80:0:0:0:10d0:e3c:e8d3:f3b8%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.4', java.version: '16.0.2'
-Driver info: driver.version: RemoteWebDriver]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//*[@name='email']
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'Tokyos-Air', ip: 'fe80:0:0:0:10d0:e3c:e8d3:f3b8%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '11.4', java.version: '16.0.2'
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at WebApp.XPathHelper.getElementByXPath(XPathHelper.java:109)
-	at WebApp.XPathHelper.getElementByname(XPathHelper.java:74)
-	at com.sts.web.PageElements.LoginPageElements.getUserNameElement(LoginPageElements.java:22)
-	at com.sts.web.StepDefinition.LoginSteps.loginToDocusign(LoginSteps.java:16)
-	at com.sts.web.TestRunner.TestRunner.searchHotelTest(TestRunner.java:46)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:84)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:348)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:343)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:305)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:254)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1224)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1149)
-	at org.testng.TestNG.run(TestNG.java:1057)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- searchHotelTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.sts.web.TestRunner.TestRunner@f09733f]" started-at="2024-02-22T16:11:05Z" name="tearDown" finished-at="2024-02-22T16:11:05Z" duration-ms="119" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.sts.web.TestRunner.TestRunner -->
-    </test> <!-- SearchHotel_Chrome -->
+    </test> <!-- Create_Template -->
   </suite> <!-- Suite -->
 </testng-results>

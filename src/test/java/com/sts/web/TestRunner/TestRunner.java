@@ -30,17 +30,17 @@ public class TestRunner {
 
     @BeforeMethod
     public void setUp(String browser) throws IOException, InterruptedException {
-       
+    	    boolean attachEvidence = true;
             driver = new BrowserFactory().setUpDriver(browser);
             driver.manage().window().maximize();
             ExtentTestManager.startTest("BeforeTests");
-            loginSteps = new LoginSteps(driver);
-            createTemplate = new CreateTemplate(driver);
+            loginSteps = new LoginSteps(driver, attachEvidence);
+            createTemplate = new CreateTemplate(driver, attachEvidence);
        
     }
 
     @Test
-    public void searchHotelTest() throws IOException, InterruptedException, FilloException {
+    public void searchHotelTest() throws Exception {
      
             driver.get(fileHandlerClass.GetPropVal(propertyFilePath, "DocisignURL"));
             loginSteps.loginToDocusign(

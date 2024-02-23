@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite parallel="none" name="Failed suite [Suite]">
-  <parameter name="browser" value="chrome"/>
+  <parameter name="browser" value="firefox"/>
   <listeners>
     <listener class-name="Listeners.Listeners"/>
   </listeners>
@@ -12,25 +12,9 @@
         <methods>
           <include name="searchHotelTest"/>
           <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- com.sts.web.TestRunner.TestRunner -->
     </classes>
   </test> <!-- SearchHotel_Firefox(failed) -->
-  <test parallel="none" name="SearchHotel_Chrome(failed)">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="com.sts.web.TestRunner.TestRunner">
-        <methods>
-          <include name="searchHotelTest"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.sts.web.TestRunner.TestRunner -->
-    </classes>
-  </test> <!-- SearchHotel_Chrome(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Feb 22 16:10:53 SAST 2024</td>
+<td>Started on:</td><td>Thu Feb 22 16:50:00 SAST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>11 seconds (11409 ms)</td>
+<tr><td>Total time:</td><td>164 seconds (164478 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -76,35 +76,53 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.sts.web.TestRunner.TestRunner.searchHotelTest()'><b>searchHotelTest</b><br>Test class: com.sts.web.TestRunner.TestRunner</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//*[@name=&apos;email&apos;]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+<td><div><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.57)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;Tokyos-Air&apos;, ip: &apos;fe80:0:0:0:10d0:e3c:e8d3:f3b8%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.4&apos;, java.version: &apos;16.0.2&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.57, chrome: {chromedriverVersion: 122.0.6261.57 (87957e464700..., userDataDir: /var/folders/10/nx41rvp50wq...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49174}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.104:4444/ses..., se:cdpVersion: 122.0.6261.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6f5fd493160e07c3a8eb127d5f7978b1
+*** Element info: {Using=xpath, value=//input[@data-qa=&apos;upload-file-input-file-drop&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at WebApp.XPathHelper.getElementByXPath(XPathHelper.java:109)
-	at WebApp.XPathHelper.getElementByname(XPathHelper.java:74)
-	at com.sts.web.PageElements.LoginPageElements.getUserNameElement(LoginPageElements.java:22)
-	at com.sts.web.StepDefinition.LoginSteps.loginToDocusign(LoginSteps.java:16)
-	at com.sts.web.TestRunner.TestRunner.searchHotelTest(TestRunner.java:46)
-... Removed 24 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace943219925", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace943219925'><pre>org.openqa.selenium.NoSuchElementException: Cannot locate an element using xpath=//*[@name=&apos;email&apos;]
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+	at com.sts.web.PageElements.CreateTemplateSteps.attachDoc(CreateTemplateSteps.java:53)
+	at com.sts.web.StepDefinition.CreateTemplate.createNewTemplate(CreateTemplate.java:24)
+	at com.sts.web.TestRunner.TestRunner.searchHotelTest(TestRunner.java:54)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1903137985", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1903137985'><pre>org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=122.0.6261.57)
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;Tokyos-Air&apos;, ip: &apos;fe80:0:0:0:10d0:e3c:e8d3:f3b8%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;11.4&apos;, java.version: &apos;16.0.2&apos;
-Driver info: driver.version: RemoteWebDriver
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:327)
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.57, chrome: {chromedriverVersion: 122.0.6261.57 (87957e464700..., userDataDir: /var/folders/10/nx41rvp50wq...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49174}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://192.168.1.104:4444/ses..., se:cdpVersion: 122.0.6261.57, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 6f5fd493160e07c3a8eb127d5f7978b1
+*** Element info: {Using=xpath, value=//input[@data-qa=&apos;upload-file-input-file-drop&apos;]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor24.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
 	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at WebApp.XPathHelper.getElementByXPath(XPathHelper.java:109)
-	at WebApp.XPathHelper.getElementByname(XPathHelper.java:74)
-	at com.sts.web.PageElements.LoginPageElements.getUserNameElement(LoginPageElements.java:22)
-	at com.sts.web.StepDefinition.LoginSteps.loginToDocusign(LoginSteps.java:16)
-	at com.sts.web.TestRunner.TestRunner.searchHotelTest(TestRunner.java:46)
+	at com.sts.web.PageElements.CreateTemplateSteps.attachDoc(CreateTemplateSteps.java:53)
+	at com.sts.web.StepDefinition.CreateTemplate.createNewTemplate(CreateTemplate.java:24)
+	at com.sts.web.TestRunner.TestRunner.searchHotelTest(TestRunner.java:54)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -130,7 +148,7 @@ Driver info: driver.version: RemoteWebDriver
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>1</td>
+<td>154</td>
 <td>com.sts.web.TestRunner.TestRunner@f09733f</td></tr>
 </table><p>
 </body>

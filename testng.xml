@@ -7,24 +7,24 @@
         <listener class-name="Listeners.Listeners"/>
     </listeners> 
     
-   <test name="SearchHotel_Firefox" preserve-order="true">
+   <test name="Create_Template" preserve-order="true">
         <parameter name="browser" value="firefox" />
         <classes>
             <class name="com.sts.web.TestRunner.TestRunner"/>
         </classes>
     </test>
 
-    <test name="SearchHotel_Chrome" preserve-order="true">
+   <!--  <test name="SearchHotel_Chrome" preserve-order="true">
         <parameter name="browser" value="chrome" />
         <classes>
             <class name="com.sts.web.TestRunner.TestRunner"/>
         </classes>
-    </test>  
- <!--  
+    </test>   
+  
    <test name="Place_Order" preserve-order="true">
         <classes>
             <class name="com.sts.api.runnerClass.ApiRunner"/>
         </classes>
-    </test>  --> 
+    </test>  -->
 
 </suite>
