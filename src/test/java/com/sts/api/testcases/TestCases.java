@@ -29,7 +29,7 @@ public class TestCases {
 	     String endpoint = "/v2/store/order";
 	     
 	     setupHeaders() ;
-	     apiHelper.ParametizePayloadAndSendPostRequest(
+	     apiHelper  .ParametizePayloadAndSendPostRequest(
 	    		 Payloads.getPetPayload(), 
 	    		 filePath, 
 	    		 sheetName,  

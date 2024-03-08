@@ -33,7 +33,9 @@ public class CreateTemplateSteps {
 	}
 	
 	public FluentClass getTemplateTab() throws IOException, InterruptedException {
-		return new FluentClass(wait.waitForElementClickable("//*[@data-qa='header-TEMPLATES-tab-button']"),driver,  "Template Tab", attachEvidence);
+		return new FluentClass(
+				
+				wait.waitForElementClickable("//*[@data-qa='header-TEMPLATES-tab-button']"),driver,  "Template Tab", attachEvidence);
 	}
 
 	public FluentClass getCreateTemplateButton() throws IOException, InterruptedException {
@@ -104,6 +106,8 @@ public class CreateTemplateSteps {
 		mouseActions.dragAndDropByOffset(xPathHelper.getElementByXPath("//*[@title='Initial']"), 5, 9);
 		WebElement ele = xPathHelper.getElementByXPath("(//*[@style= 'pointer-events: auto; cursor: pointer;'])[2]");
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		
+		
 	} 
 	public FluentClass getUseButton(String eleName) throws IOException, InterruptedException {
 

@@ -29,6 +29,8 @@ public class LoginPageElements {
     }
 
     protected FluentClass getNextButtonElement() throws IOException, InterruptedException {
+    	
+   
         return new FluentClass(xPathHelper.getElementByXPath("//button[@type='submit']"), driver, "Next Button", attachEvidence);
     }
     
