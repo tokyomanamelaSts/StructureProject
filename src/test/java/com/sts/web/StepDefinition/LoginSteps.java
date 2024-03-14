@@ -11,7 +11,7 @@ public class LoginSteps extends LoginPageElements {
         super(driver);
     }
 
-    public void loginToAdactin(String username, String password) throws IOException, InterruptedException {
+    public void loginToAdactin(String username, String password) throws Exception {
     	getUserNameElement().type(username);
     	getPasswordElement() .type(password);
     	getSubmitButtonElement().click();

@@ -1,36 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite parallel="none" name="Failed suite [Suite]">
-  <parameter name="browser" value="chrome"/>
-  <listeners>
-    <listener class-name="Listeners.Listeners"/>
-  </listeners>
-  <test parallel="none" name="SearchHotel_Firefox(failed)">
-    <parameter name="browser" value="firefox"/>
+  <test parallel="none" name="Place_Order(failed)">
     <classes>
-      <class name="com.sts.web.TestRunner.TestRunner">
+      <class name="com.sts.api.runnerClass.ApiRunner">
         <methods>
-          <include name="searchHotelTest"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
+          <include name="OrderPetRunner"/>
         </methods>
-      </class> <!-- com.sts.web.TestRunner.TestRunner -->
+      </class> <!-- com.sts.api.runnerClass.ApiRunner -->
     </classes>
-  </test> <!-- SearchHotel_Firefox(failed) -->
-  <test parallel="none" name="SearchHotel_Chrome(failed)">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="com.sts.web.TestRunner.TestRunner">
-        <methods>
-          <include name="searchHotelTest"/>
-          <include name="setUp"/>
-          <include name="setUp"/>
-          <include name="tearDown"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- com.sts.web.TestRunner.TestRunner -->
-    </classes>
-  </test> <!-- SearchHotel_Chrome(failed) -->
+  </test> <!-- Place_Order(failed) -->
 </suite> <!-- Failed suite [Suite] -->

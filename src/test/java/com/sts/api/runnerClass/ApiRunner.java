@@ -19,7 +19,7 @@ public class ApiRunner {
 	public void OrderPetRunner() throws Exception {
 	  
 		
-		testCase.PlaceOrder();
+		testCase.test();;
 		
 		
 		

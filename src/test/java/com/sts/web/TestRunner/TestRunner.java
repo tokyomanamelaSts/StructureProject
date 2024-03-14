@@ -40,7 +40,7 @@ public class TestRunner {
     }
 
     @Test
-    public void searchHotelTest() throws IOException, InterruptedException, FilloException {
+    public void searchHotelTest() throws Exception {
      
             driver.get(fileHandlerClass.GetPropVal(propertyFilePath, "AdactinUsername"));
             loginSteps.loginToAdactin(

@@ -16,7 +16,7 @@ public class SearchHotel extends SearchHotelPageElements{
 	}
 
 	public void searchHotel(String Location, String holtels, String RoomType, String NoOfRoom,
-			String checkIn, String Checkout, String AdultRoom , String KidsRoom ) throws IOException, InterruptedException {
+			String checkIn, String Checkout, String AdultRoom , String KidsRoom ) throws Exception {
 
 		 getSelectLocation().selectDropdownByText(Location);
 		 getSelectRoomType().selectDropdownByText(RoomType);

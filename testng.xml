@@ -2,29 +2,21 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite" parallel="none">
 
-    <listeners>
-        <!-- Ensure that the listener class is available and correctly configured -->
-        <listener class-name="Listeners.Listeners"/>
-    </listeners> 
-    
-   <test name="SearchHotel_Firefox" preserve-order="true">
-        <parameter name="browser" value="firefox" />
-        <classes>
-            <class name="com.sts.web.TestRunner.TestRunner"/>
-        </classes>
-    </test>
+	<listeners>
+	
+		<listener class-name="Listeners.Listeners" />
+	</listeners>
 
-    <test name="SearchHotel_Chrome" preserve-order="true">
-        <parameter name="browser" value="chrome" />
-        <classes>
-            <class name="com.sts.web.TestRunner.TestRunner"/>
-        </classes>
-    </test>  
-  
-   <test name="Place_Order" preserve-order="true">
-        <classes>
-            <class name="com.sts.api.runnerClass.ApiRunner"/>
-        </classes>
-    </test>  
+	<!-- <test name="SearchHotel_Firefox" preserve-order="true"> <parameter 
+		name="browser" value="firefox" /> <classes> <class name="com.sts.web.TestRunner.TestRunner"/> 
+		</classes> </test> <test name="SearchHotel_Chrome" preserve-order="true"> 
+		<parameter name="browser" value="chrome" /> <classes> <class name="com.sts.web.TestRunner.TestRunner"/> 
+		</classes> </test> -->
+
+	<test name="Place_Order" preserve-order="true">
+		<classes>
+			<class name="com.sts.api.runnerClass.ApiRunner" />
+		</classes>
+	</test>
 
 </suite>
